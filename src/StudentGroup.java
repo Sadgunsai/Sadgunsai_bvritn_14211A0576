@@ -200,42 +200,19 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public int getCurrentAgeByDate(int indexOfStudent) {
 		// Add your implementation here
-		if(indexOfStudent==0)
-			throw new IllegalArgumentException();
 		return 0;
 	}
 
 	@Override
 	public Student[] getStudentsByAge(int age) {
 		// Add your implementation here
-		
 		return null;
 	}
 
 	@Override
 	public Student[] getStudentsWithMaxAvgMark() {
 		// Add your implementation here
-		double max=0;
-		int count=0,k=0;
-		for(int i=0;i<students.length;i++) {
-			if(max<students[i].getAvgMark()) {
-				max+=students[i].getAvgMark();
-			}
-		}
-		max/=students.length;
-		for(int i=0;i<students.length;i++) {
-			if(max<=students[i].getAvgMark()) {
-				count++;
-			}
-		}
-		Student[] arr= new Student[count];
-		for(int i=0;i<students.length;i++) {
-			if(max==students[i].getAvgMark()) {
-				arr[k++]=students[i];
-			}
-		}
-
-		return arr;
+		return null;
 	}
 
 
