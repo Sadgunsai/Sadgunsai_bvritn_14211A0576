@@ -44,17 +44,19 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void setStudent(Student student, int index) {
 		// Add your implementation here
-		this.students[index]=students[index];
+		this.students[index]=student;
 	}
 
 	@Override
 	public void addFirst(Student student) {
 		// Add your implementation here
+		this.students[0]=student;
 	}
 
 	@Override
 	public void addLast(Student student) {
 		// Add your implementation here
+		this.students[students.length]=student;
 	}
 
 	@Override
