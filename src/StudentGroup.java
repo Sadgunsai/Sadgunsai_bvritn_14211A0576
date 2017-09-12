@@ -235,7 +235,7 @@ public class StudentGroup implements StudentArrayOperation {
 			}
 		}
 
-		return null;
+		return arr;
 	}
 
 
