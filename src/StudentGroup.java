@@ -182,16 +182,12 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getByBirthDate(Date date) {
 		// Add your implementation here
-		if(date==null)
-			throw new IllegalArgumentException();
 		return null;
 	}
 
 	@Override
 	public Student[] getBetweenBirthDates(Date firstDate, Date lastDate) {
 		// Add your implementation here
-		if(firstDate==null || lastDate==null)
-			throw new IllegalArgumentException();
 		return null;
 	}
 
@@ -211,8 +207,9 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public Student[] getStudentsByAge(int age) {
-		return students;
 		// Add your implementation here
+		
+		return null;
 	}
 
 	@Override
@@ -237,6 +234,7 @@ public class StudentGroup implements StudentArrayOperation {
 				arr[k++]=students[i];
 			}
 		}
+
 		return arr;
 	}
 
