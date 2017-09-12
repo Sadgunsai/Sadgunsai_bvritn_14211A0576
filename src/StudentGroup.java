@@ -26,42 +26,66 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getStudents() {
 		// Add your implementation here
-		return students;
+			return students;
 	}
 
 	@Override
 	public void setStudents(Student[] students) {
 		// Add your implementation here
-		this.students=students;
-	}
+		if(this.students== null) {
+			throw new IllegalArgumentException();
+		}
+		else
+			this.students=students;
+	}	
 
 	@Override
 	public Student getStudent(int index) {
 		// Add your implementation here
-		return students[index];
+		if(index<0 || index>=students.length)
+			throw new IllegalArgumentException();
+		else
+			return students[index];
 	}
 
 	@Override
 	public void setStudent(Student student, int index) {
 		// Add your implementation here
-		this.students[index]=student;
+		if(student==null)
+			throw new IllegalArgumentException();
+		else if(index<0 || index>=students.length)
+			throw new IllegalArgumentException();
+		else
+			this.students[index]=student;
 	}
 
 	@Override
 	public void addFirst(Student student) {
 		// Add your implementation here
-		this.students[0]=student;
+		if(student==null)
+			throw new IllegalArgumentException();
+		else
+			students[0]=student;
 	}
 
 	@Override
 	public void addLast(Student student) {
 		// Add your implementation here
-		this.students[students.length]=student;
+		if(student==null)
+			throw new IllegalArgumentException();
+		else
+			students[students.length-1]=student;
 	}
 
 	@Override
 	public void add(Student student, int index) {
 		// Add your implementation here
+		if(student==null)
+			throw new IllegalArgumentException();
+		else if(index<0 || index>=students.length)
+			throw new IllegalArgumentException();
+		else
+			students[index]=student;
 	}
 
 	@Override
