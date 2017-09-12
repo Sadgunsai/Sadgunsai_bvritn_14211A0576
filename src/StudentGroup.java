@@ -219,11 +219,12 @@ public class StudentGroup implements StudentArrayOperation {
 		int count=0,k=0;
 		for(int i=0;i<students.length;i++) {
 			if(max<students[i].getAvgMark()) {
-				max=students[i].getAvgMark();
+				max+=students[i].getAvgMark();
 			}
 		}
+		max/=students.length;
 		for(int i=0;i<students.length;i++) {
-			if(max==students[i].getAvgMark()) {
+			if(max<=students[i].getAvgMark()) {
 				count++;
 			}
 		}
