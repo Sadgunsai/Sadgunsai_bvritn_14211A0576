@@ -148,15 +148,6 @@ public class StudentGroup implements StudentArrayOperation {
 		}
 		
 	}
-
-	@Override
-	public void remove(Student student) {
-		if(student==null)
-			throw new IllegalArgumentException();
-		
-		// Add your implementation here
-	}
-
 	@Override
 	public void removeFromIndex(int index) {
 		if(students==null||index<0||index>=students.length)
