@@ -184,7 +184,6 @@ public class StudentGroup implements StudentArrayOperation {
 		// Add your implementation here
 		if(date==null)
 			throw new IllegalArgumentException();
-		else
 		return null;
 	}
 
@@ -193,7 +192,6 @@ public class StudentGroup implements StudentArrayOperation {
 		// Add your implementation here
 		if(firstDate==null || lastDate==null)
 			throw new IllegalArgumentException();
-		else
 		return null;
 	}
 
