@@ -105,7 +105,7 @@ public class StudentGroup implements StudentArrayOperation {
 		else
 		{
 			Student[] arr=new Student[students.length-1];
-			for(int i=index;i<students.length;i++)
+			for(int i=index;i<students.length-1;i++)
 				students[i]=students[i+1];
 			for(int i=0;i<arr.length;i++)
 			{
@@ -136,7 +136,7 @@ public class StudentGroup implements StudentArrayOperation {
 				throw new IllegalArgumentException();
 			else {
 				Student[] arr=new Student[students.length-1];
-				for(int i=ind;i<students.length;i++)
+				for(int i=ind;i<students.length-1;i++)
 					students[i]=students[i+1];
 				for(int i=0;i<arr.length;i++)
 				{
@@ -213,6 +213,18 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student getNextStudent(Student student) {
 		// Add your implementation here
-		return null;
+		int ind=0,count=0;
+		for(int i=0;i<students.length;i++) {
+			if(students[i]==student)
+			{
+				ind=i;
+				count=1;
+				break;
+			}
+		}
+		if(count==0)
+			throw new IllegalArgumentException();
+		else
+			return students[ind+1];
 	}
 }
