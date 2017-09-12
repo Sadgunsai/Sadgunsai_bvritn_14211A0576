@@ -158,6 +158,9 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void removeFromElement(Student student) {
 		// Add your implementation here
+		if(student==null){
+			throw new IllegalArgumentException();
+		}
 	}
 
 	@Override
@@ -182,12 +185,16 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getByBirthDate(Date date) {
 		// Add your implementation here
+		if(date==null)
+			throw new IllegalArgumentException();
 		return null;
 	}
 
 	@Override
 	public Student[] getBetweenBirthDates(Date firstDate, Date lastDate) {
 		// Add your implementation here
+		if(firstDate==null||lastDate==null)
+			throw new IllegalArgumentException();
 		return null;
 	}
 
@@ -219,7 +226,7 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student getNextStudent(Student student) {
 		// Add your implementation here
-		if(students==null)
+		if(student==null)
 			throw new IllegalArgumentException();
 		else {	
 		int ind=0,count=0;
